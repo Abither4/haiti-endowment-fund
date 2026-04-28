@@ -1,0 +1,3 @@
+# Scratch HTML files used to extract assets from the existing Wix site
+*.html
+!index.html

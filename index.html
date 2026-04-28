@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Haiti Endowment Fund — God's hands and feet in Haiti</title>
+  <meta name="description" content="For more than 35 years, Haiti Endowment Fund has supported the Haitian church in Hinche through schools, meals, clean water, and the gospel. 95¢ of every dollar reaches Haiti." />
+  <meta name="theme-color" content="#0B1B2B" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Haiti Endowment Fund" />
+  <meta property="og:description" content="For more than 35 years, raising up the Haitian body of Christ to serve their own community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.haitiendowmentfund.org/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---------- Tokens ---------- */
+    :root {
+      --ink:        #0B1B2B;   /* deep navy, near-black */
+      --ink-2:      #1A2D40;
+      --cream:      #FAF6EE;   /* warm paper */
+      --cream-2:    #F1E9D7;
+      --sun:        #E89D2A;   /* warm gold */
+      --terra:      #C6502B;   /* terracotta */
+      --sky:        #6FB3C9;   /* Caribbean teal */
+      --stone:      #5A6976;
+      --line:       rgba(11,27,43,.12);
+
+      --font-serif: 'Fraunces','Iowan Old Style','Georgia',serif;
+      --font-sans:  'Inter','Helvetica Neue','Arial',system-ui,sans-serif;
+
+      --shadow-sm: 0 1px 2px rgba(11,27,43,.06), 0 2px 8px rgba(11,27,43,.04);
+      --shadow-md: 0 6px 16px rgba(11,27,43,.08), 0 24px 48px rgba(11,27,43,.06);
+      --radius:    14px;
+      --radius-lg: 22px;
+
+      --maxw: 1180px;
+    }
+
+    *,*::before,*::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--sun);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    h1,h2,h3,h4 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin: 0 0 .5em;
+    }
+    h1 { font-size: clamp(2.4rem, 5.5vw, 4.6rem); font-weight: 500; letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+    h3 { font-size: 1.35rem; }
+    p  { margin: 0 0 1em; }
+    .lede { font-size: 1.15rem; color: var(--ink-2); }
+
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--sun);
+      color: var(--ink);
+      box-shadow: 0 6px 16px rgba(232,157,42,.35);
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(232,157,42,.45); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--cream);
+      border-color: rgba(250,246,238,.35);
+    }
+    .btn-ghost:hover { background: rgba(250,246,238,.08); }
+    .btn-dark {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .btn-dark:hover { background: var(--ink-2); }
+
+    /* ---------- Nav ---------- */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(250,246,238,.85);
+      backdrop-filter: saturate(180%) blur(10px);
+      -webkit-backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 14px;
+      text-decoration: none; color: var(--ink);
+    }
+    .brand-logo {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+    .brand-divider {
+      width: 1px; height: 28px;
+      background: var(--line);
+    }
+    .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .brand-text small { font-size: 0.72rem; color: var(--stone); letter-spacing: .14em; text-transform: uppercase; font-weight: 600; }
+    .brand-text span { font-size: 0.78rem; color: var(--ink-2); }
+    @media (max-width: 600px) {
+      .brand-divider, .brand-text { display: none; }
+      .brand-logo { height: 38px; }
+    }
+
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover { color: var(--terra); }
+    .nav-cta { display: flex; gap: 10px; align-items: center; }
+
+    @media (max-width: 880px) {
+      .nav-links { display: none; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      background: var(--ink);
+      color: var(--cream);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(180deg, rgba(11,27,43,.55) 0%, rgba(11,27,43,.55) 40%, rgba(11,27,43,.92) 100%),
+        url('images/hero.jpg');
+      background-size: cover;
+      background-position: center 35%;
+      z-index: -1;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(900px 500px at 80% -10%, rgba(232,157,42,.18), transparent 60%),
+        radial-gradient(700px 600px at 0% 110%, rgba(198,80,43,.22), transparent 60%);
+      z-index: -1;
+    }
+    .hero-inner {
+      padding: 120px 24px 110px;
+      max-width: var(--maxw); margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 6px 14px;
+      border: 1px solid rgba(250,246,238,.25);
+      border-radius: 999px;
+      font-size: .82rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 26px;
+    }
+    .eyebrow .dot { width: 6px; height: 6px; border-radius: 999px; background: var(--sun); }
+    .hero h1 { max-width: 16ch; }
+    .hero .lede {
+      max-width: 56ch;
+      color: rgba(250,246,238,.82);
+      font-size: 1.2rem;
+      margin-top: 18px;
+    }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 36px; }
+
+    .hero-tag {
+      margin-top: 70px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: rgba(250,246,238,.6);
+      font-size: 1.1rem;
+    }
+
+    /* ---------- Stats ---------- */
+    .stats {
+      background: var(--cream-2);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+    }
+    .stat {
+      padding: 36px 24px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+    .stat:last-child { border-right: 0; }
+    .stat .num {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 600;
+      color: var(--terra);
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .stat .label {
+      margin-top: 8px;
+      font-size: 0.88rem;
+      color: var(--stone);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    @media (max-width: 880px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .stat:nth-child(2n) { border-right: 0; }
+      .stat:last-child { grid-column: 1 / -1; border-bottom: 0; }
+    }
+
+    /* ---------- Sections ---------- */
+    section { padding: 100px 0; }
+    section.tight { padding: 72px 0; }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 56px;
+    }
+    .section-head .kicker {
+      font-size: .85rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--terra);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    /* ---------- Mission / two-col ---------- */
+    .twocol {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+      align-items: start;
+    }
+    @media (max-width: 880px) { .twocol { grid-template-columns: 1fr; gap: 36px; } }
+
+    .scripture {
+      border-left: 3px solid var(--sun);
+      padding: 8px 0 8px 22px;
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--ink);
+      max-width: 38ch;
+    }
+    .scripture cite {
+      display: block;
+      font-style: normal;
+      font-family: var(--font-sans);
+      font-size: .85rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 10px;
+    }
+
+    /* ---------- Founders ---------- */
+    .founders {
+      background: var(--ink);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .founders::before {
+      content: "";
+      position: absolute; right: -180px; top: -180px;
+      width: 520px; height: 520px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(232,157,42,.18), transparent 70%);
+      z-index: 0;
+    }
+    .founders .wrap { position: relative; z-index: 1; }
+    .founders .kicker { color: var(--sun); }
+    .founders h2 { color: var(--cream); }
+    .founders-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 56px;
+      align-items: center;
+    }
+    @media (max-width: 880px) { .founders-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+    .portrait {
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-lg);
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.7) 100%),
+        url('images/founders.jpg');
+      background-size: cover;
+      background-position: center 25%;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    .portrait .frame-tag {
+      position: absolute;
+      left: 22px; bottom: 22px; right: 22px;
+      color: var(--cream);
+      font-family: var(--font-serif);
+      font-style: italic;
+      text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    }
+    .portrait .frame-tag small {
+      display: block;
+      font-style: normal;
+      font-family: var(--font-sans);
+      font-size: .78rem;
+      color: rgba(250,246,238,.85);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .founders p { color: rgba(250,246,238,.85); font-size: 1.05rem; }
+    .founders .scripture { color: var(--cream); border-color: var(--sun); }
+    .founders .scripture cite { color: rgba(250,246,238,.55); }
+
+    .memorial {
+      margin-top: 28px;
+      padding: 18px 22px;
+      background: rgba(250,246,238,.06);
+      border: 1px solid rgba(250,246,238,.12);
+      border-radius: var(--radius);
+      font-size: .95rem;
+      color: rgba(250,246,238,.8);
+    }
+    .memorial strong { color: var(--cream); }
+
+    /* ---------- Programs ---------- */
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    @media (max-width: 980px) { .programs-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .programs-grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(11,27,43,.22);
+    }
+    .card .ico {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--cream-2);
+      color: var(--terra);
+      display: grid; place-items: center;
+      margin-bottom: 18px;
+    }
+    .card .ico svg { width: 22px; height: 22px; }
+    .card h3 { margin-bottom: 8px; font-size: 1.15rem; }
+    .card p { font-size: .95rem; color: var(--stone); margin: 0; }
+    .card .pill {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 4px 10px;
+      background: var(--cream);
+      border-radius: 999px;
+      font-size: .78rem;
+      color: var(--ink);
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+
+    /* ---------- Compound ---------- */
+    .compound {
+      background: var(--cream-2);
+    }
+    .compound-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    @media (max-width: 880px) { .compound-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+    .compound-img {
+      aspect-ratio: 5 / 4;
+      border-radius: var(--radius-lg);
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(11,27,43,.75) 100%),
+        url('images/gallery/35ed725d.png');
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+    .compound-img::after {
+      content: "Hinche, Haiti · 25-acre compound";
+      position: absolute; left: 22px; bottom: 18px;
+      color: var(--cream);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1rem;
+      text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    }
+
+    /* ---------- Stories gallery ---------- */
+    .stories { background: #fff; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 200px;
+      gap: 14px;
+      margin-top: 36px;
+    }
+    .gallery-grid figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--ink);
+    }
+    .gallery-grid figure img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .5s ease;
+    }
+    .gallery-grid figure:hover img { transform: scale(1.04); }
+    .gallery-grid figcaption {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 16px 16px 14px;
+      background: linear-gradient(180deg, transparent, rgba(11,27,43,.85));
+      color: var(--cream);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: .95rem;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .3s ease, transform .3s ease;
+    }
+    .gallery-grid figure:hover figcaption {
+      opacity: 1; transform: none;
+    }
+
+    .g-tall { grid-column: span 2; grid-row: span 2; }
+    .g-wide { grid-column: span 2; }
+    .g-sq   { grid-column: span 2; }
+
+    @media (max-width: 880px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+      .g-tall, .g-wide, .g-sq { grid-column: span 1; grid-row: auto; }
+      .g-tall { grid-column: span 2; grid-row: span 2; }
+      .gallery-grid figcaption { opacity: 1; transform: none; font-size: .85rem; }
+    }
+
+    .feature-list { list-style: none; padding: 0; margin: 24px 0 0; }
+    .feature-list li {
+      display: flex; gap: 14px; padding: 12px 0;
+      border-top: 1px solid var(--line);
+      font-size: .98rem;
+    }
+    .feature-list li:last-child { border-bottom: 1px solid var(--line); }
+    .feature-list .check {
+      flex: none;
+      width: 22px; height: 22px;
+      border-radius: 999px;
+      background: var(--sun);
+      color: var(--ink);
+      display: grid; place-items: center;
+      font-size: 12px; font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* ---------- Why Haiti ---------- */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+    }
+    @media (max-width: 880px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .why-stat {
+      padding: 26px;
+      border-radius: var(--radius);
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+    .why-stat .big {
+      font-family: var(--font-serif);
+      font-size: 2.6rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .why-stat .desc { font-size: .95rem; color: var(--stone); margin-top: 8px; }
+
+    .why-feature {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: 16px;
+      box-shadow: var(--shadow-md);
+      aspect-ratio: 16 / 9;
+      background-color: var(--ink);
+    }
+    .why-feature img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+    }
+    .why-feature figcaption {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 28px 28px 24px;
+      background: linear-gradient(180deg, transparent 0%, rgba(11,27,43,.85) 100%);
+      color: var(--cream);
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+    .why-feature figcaption small {
+      display: block;
+      font-style: normal;
+      font-family: var(--font-sans);
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--sun);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    /* ---------- Donate ---------- */
+    .donate {
+      background: linear-gradient(135deg, var(--terra) 0%, #a83e1f 100%);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .donate::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(250,246,238,.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      mask-image: radial-gradient(circle at 80% 30%, black, transparent 70%);
+    }
+    .donate .wrap { position: relative; }
+    .donate-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    @media (max-width: 880px) { .donate-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .donate h2 { color: var(--cream); }
+    .donate p { color: rgba(250,246,238,.9); }
+
+    .donate-card {
+      background: rgba(11,27,43,.45);
+      border: 1px solid rgba(250,246,238,.18);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      backdrop-filter: blur(6px);
+    }
+    .donate-card h3 { color: var(--cream); }
+    .donate-card .row {
+      display: flex; justify-content: space-between;
+      padding: 12px 0;
+      border-top: 1px solid rgba(250,246,238,.14);
+      font-size: .95rem;
+    }
+    .donate-card .row:first-of-type { border-top: 0; }
+    .donate-card .row span:last-child { color: rgba(250,246,238,.7); }
+
+    /* ---------- Contact ---------- */
+    .contact {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 36px;
+    }
+    @media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    .contact h2 { color: var(--cream); }
+    .contact .label {
+      font-size: .8rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--sun);
+      font-weight: 600; margin-bottom: 8px;
+    }
+    .contact a { color: var(--cream); text-decoration: none; border-bottom: 1px solid rgba(250,246,238,.25); }
+    .contact a:hover { border-color: var(--sun); }
+    .contact .big-link { font-family: var(--font-serif); font-size: 1.4rem; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      background: #060f18;
+      color: rgba(250,246,238,.6);
+      padding: 36px 0;
+      font-size: .9rem;
+    }
+    .foot {
+      display: flex; justify-content: space-between; gap: 16px;
+      flex-wrap: wrap; align-items: center;
+    }
+    .social { display: flex; gap: 14px; }
+    .social a {
+      width: 36px; height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(250,246,238,.18);
+      display: grid; place-items: center;
+      color: rgba(250,246,238,.7);
+      transition: all .15s ease;
+      border-bottom: 1px solid rgba(250,246,238,.18);
+    }
+    .social a:hover { color: var(--sun); border-color: var(--sun); }
+    .social svg { width: 16px; height: 16px; }
+
+    /* ---------- Reveal animation (subtle) ---------- */
+    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========== NAV =========== -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Haiti Endowment Fund — home">
+        <img class="brand-logo" src="images/logo.png" alt="Haiti Endowment Fund" />
+        <div class="brand-divider" aria-hidden="true"></div>
+        <div class="brand-text">
+          <small>Est. 1990</small>
+          <span>Hinche, Haiti</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#mission">Our Mission</a>
+        <a href="#founders">Founders</a>
+        <a href="#programs">Programs</a>
+        <a href="#stories">Stories</a>
+        <a href="#compound">The Compound</a>
+        <a href="#why">Why Haiti</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#donate" class="btn btn-primary">Donate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========== HERO =========== -->
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="eyebrow"><span class="dot"></span> 35+ years of faithful ministry in Haiti</div>
+        <h1>God's hands and feet, where the road ends.</h1>
+        <p class="lede">
+          Haiti Endowment Fund raises up, supports, and encourages the local Haitian body of Christ
+          to minister to its own community — through schools, daily meals, clean water, churches,
+          and the gospel of Jesus Christ.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#donate">Give to the work →</a>
+          <a class="btn btn-ghost" href="#mission">Learn our story</a>
+        </div>
+        <p class="hero-tag">"Ruined for the normal."</p>
+      </div>
+    </section>
+
+    <!-- =========== STATS =========== -->
+    <section class="stats tight" aria-label="Impact at a glance">
+      <div class="wrap">
+        <div class="stats-grid">
+          <div class="stat"><div class="num">35+</div><div class="label">Years in Haiti</div></div>
+          <div class="stat"><div class="num">13</div><div class="label">Schools sponsored</div></div>
+          <div class="stat"><div class="num">3,000+</div><div class="label">Daily hot meals</div></div>
+          <div class="stat"><div class="num">17</div><div class="label">Local churches</div></div>
+          <div class="stat"><div class="num">95¢</div><div class="label">Of every dollar reaches Haiti</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== MISSION =========== -->
+    <section id="mission">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Our Mission</div>
+          <h2>To raise up, support, and encourage the local Haitian body of Christ.</h2>
+        </div>
+
+        <div class="twocol">
+          <div>
+            <p class="lede">
+              We are a non-profit, non-government organization rooted in the Central Plateau of Haiti.
+              Our work is carried out by Haitian pastors, teachers, and leaders — men and women called
+              by God to serve their own neighbors.
+            </p>
+            <p>
+              From a 25-acre compound in Hinche, we partner with local churches and schools to feed
+              children, train leaders, dig wells, support widows and the elderly, and proclaim the gospel.
+              Every U.S. role is volunteer. There is no paid American staff.
+            </p>
+            <p>
+              That's how more than 95¢ of every dollar reaches the people of Haiti.
+            </p>
+          </div>
+          <div>
+            <blockquote class="scripture">
+              "Pure and undefiled religion before God and the Father is this: to visit orphans
+              and widows in their trouble, and to keep oneself unspotted from the world."
+              <cite>— James 1:27</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== FOUNDERS =========== -->
+    <section id="founders" class="founders">
+      <div class="wrap">
+        <div class="founders-grid">
+          <div class="portrait" role="img" aria-label="Harold and Natalie Bither, founders of Haiti Endowment Fund">
+            <div class="frame-tag">
+              Harold &amp; Natalie Bither
+              <small>Founders · Married June 17, 1950</small>
+            </div>
+          </div>
+          <div>
+            <div class="kicker">Our Founders</div>
+            <h2>A life poured out for Haiti.</h2>
+            <p>
+              Harold Bither, born in Houlton, Maine, met Natalie — a New Jersey girl from Waldwick —
+              at Zion Bible Institute in Providence. They married in 1950 and spent the next seven
+              decades in ministry: a circuit pastor in rural Maine, then Brooklyn, Massachusetts,
+              Alaska, and finally California.
+            </p>
+            <p>
+              When God called them to Haiti, the Central Plateau became their heart's home.
+              For more than twenty-five years they worked daily to build this ministry — one school,
+              one well, one church at a time. The people of Haiti became the sole purpose of their lives.
+            </p>
+            <blockquote class="scripture">
+              "Let your light so shine before men, that they may see your good works and glorify
+              your Father in heaven."
+              <cite>— Matthew 5:16</cite>
+            </blockquote>
+            <div class="memorial">
+              <strong>In loving memory of Harold Bither</strong> — called home in May 2018.
+              The work he and Natalie began continues today through their children, grandchildren,
+              and the Haitian leaders they raised up.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== PROGRAMS =========== -->
+    <section id="programs">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">What We Do</div>
+          <h2>Twelve programs. One calling.</h2>
+          <p class="lede">Every program below is led on the ground by Haitian pastors, teachers, and tradesmen — supported by partners like you.</p>
+        </div>
+
+        <div class="programs-grid">
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <!-- book -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
+            </div>
+            <h3>Education</h3>
+            <p>13 sponsored schools serving more than 3,000 Haitian children every school day.</p>
+            <span class="pill">3,000+ students</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18"/><path d="M5 11a7 7 0 0 1 14 0"/><path d="M2 16h20"/><path d="M6 20h12"/></svg>
+            </div>
+            <h3>Daily Nutrition</h3>
+            <p>3,000+ hot meals served every school day — for many children, the only meal they will eat.</p>
+            <span class="pill">Hot meal program</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M12 3v18"/><path d="M9 12h6"/></svg>
+            </div>
+            <h3>Local Churches</h3>
+            <p>17 sponsored Haitian churches — each pastored by a local believer trained in Hinche.</p>
+            <span class="pill">17 congregations</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M12 22a8 8 0 0 0 8-8c0-4-8-12-8-12s-8 8-8 12a8 8 0 0 0 8 8Z"/></svg>
+            </div>
+            <h3>Wells &amp; Cisterns</h3>
+            <p>Clean water for remote villages where families have only known a contaminated river.</p>
+            <span class="pill">Infrastructure</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-3 4-6 7-6 11a6 6 0 0 0 12 0c0-4-3-7-6-11Z"/><path d="M12 22v-3"/></svg>
+            </div>
+            <h3>Agriculture</h3>
+            <p>Chicken and fish projects, demonstration gardens, and aquaponics that feed families and teach trades.</p>
+            <span class="pill">Food security</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Conferences</h3>
+            <p>Annual conferences for women, children, pastors, and teachers — up to 300 Haitians at a time.</p>
+            <span class="pill">Discipleship</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v12"/><path d="M6 12h12"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <h3>Medical Clinic</h3>
+            <p>Onsite physical, eye, and dental care for the surrounding community.</p>
+            <span class="pill">Healthcare</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <h3>Deaf Ministry</h3>
+            <p>A ministry for the Deaf community of Hinche — sign language, fellowship, and the gospel.</p>
+            <span class="pill">Specialized</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 18l1.9-5.7A8.38 8.38 0 0 1 4 8.5a8.5 8.5 0 0 1 4.7-7.6A8.38 8.38 0 0 1 12.5 0a8.5 8.5 0 0 1 8.5 8.5Z"/></svg>
+            </div>
+            <h3>Widows &amp; Elderly</h3>
+            <p>Benevolence support — food, medicine, and dignity for those most overlooked.</p>
+            <span class="pill">Compassion</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 7v10l8 5 8-5V7Z"/><path d="M12 22V12"/><path d="M4 7l8 5 8-5"/></svg>
+            </div>
+            <h3>Camps &amp; Kids</h3>
+            <p>Children's camps, women's learning center, and youth events that change futures.</p>
+            <span class="pill">Next generation</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h2l3-9 4 18 3-9h6"/></svg>
+            </div>
+            <h3>Fire Department</h3>
+            <p>Community partnership with Hinche's first responders — one of the only fire services in the region.</p>
+            <span class="pill">Community</span>
+          </div>
+
+          <div class="card">
+            <div class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+            </div>
+            <h3>Short-Term Teams</h3>
+            <p>Visiting teams stay on the compound with secure lodging, fresh water, solar power, and transport provided.</p>
+            <span class="pill">Get involved</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== STORIES =========== -->
+    <section id="stories" class="stories">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Stories from Hinche</div>
+          <h2>The faces behind every gift.</h2>
+          <p class="lede">A meal. A hymn. A church built from cinder block. The work of God's people, photographed where it actually happens.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="g-tall">
+            <img src="images/gallery/13875fa3.jpg" alt="A young Haitian boy holding a bowl of rice from the school feeding program" loading="lazy" />
+            <figcaption>For many, the only meal of the day.</figcaption>
+          </figure>
+          <figure class="g-sq">
+            <img src="images/gallery/2cd2a690.jpg" alt="Église Maranatha de Terre Cassée — one of the 17 sponsored churches" loading="lazy" />
+            <figcaption>Église Maranatha de Terre Cassée — one of 17 partner churches.</figcaption>
+          </figure>
+          <figure class="g-sq">
+            <img src="images/gallery/66a94d24.jpg" alt="An older Haitian woman lifts her hands in worship during a church service" loading="lazy" />
+            <figcaption>Hands lifted in Hinche.</figcaption>
+          </figure>
+          <figure class="g-sq">
+            <img src="images/gallery/6deafadd.jpg" alt="Two Haitian women clapping and singing at the women's conference" loading="lazy" />
+            <figcaption>Annual women's conference at the compound.</figcaption>
+          </figure>
+          <figure class="g-sq">
+            <img src="images/gallery/a9b977dd.jpg" alt="A small Haitian girl smiles at the camera while eating a meal at school" loading="lazy" />
+            <figcaption>Lunch is served.</figcaption>
+          </figure>
+          <figure class="g-wide" style="grid-column: span 6;">
+            <img src="images/gallery/2d7806be.jpg" alt="A man rides a donkey carrying baskets past a small blue and white house in rural Haiti" loading="lazy" />
+            <figcaption>The Central Plateau, on the way to a remote school.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== COMPOUND =========== -->
+    <section id="compound" class="compound">
+      <div class="wrap">
+        <div class="compound-grid">
+          <div class="compound-img" role="img" aria-label="Aerial view of the 25-acre compound in Hinche, Haiti"></div>
+          <div>
+            <div class="kicker">The Compound</div>
+            <h2>Twenty-five acres of ministry, built one structure at a time.</h2>
+            <p>
+              From the very first acre of cleared land to the guesthouse, clinic, dormitories, and gardens
+              that stand today, the compound has grown alongside the work. Every building is the answer
+              to a specific need — and a specific prayer.
+            </p>
+            <ul class="feature-list">
+              <li><span class="check">✓</span><span>Guesthouse for visiting teams (built 2007, sleeps 28)</span></li>
+              <li><span class="check">✓</span><span>Onsite medical clinic — physical, eye, and dental care</span></li>
+              <li><span class="check">✓</span><span>School-feeding warehouse and demonstration garden</span></li>
+              <li><span class="check">✓</span><span>Aquaponics, solar power, and fresh water systems</span></li>
+              <li><span class="check">✓</span><span>Dormitories that host conferences of 300+ Haitians</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== WHY HAITI =========== -->
+    <section id="why">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Why Haiti</div>
+          <h2>Because the need is real, and the church is faithful.</h2>
+          <p class="lede">
+            Haiti is the poorest country in the Western Hemisphere. In Greater Hinche — a region of
+            roughly 100,000 people — most families have no clean water and no public electricity.
+            But the Haitian church is alive, and she is ready to serve. We come alongside her.
+          </p>
+        </div>
+
+        <figure class="why-feature">
+          <img src="images/why-haiti.jpg" alt="Haitian leaders in the Central Plateau" />
+          <figcaption>
+            <small>The local body of Christ</small>
+            "We don't go to do the work. We go to support the Haitians who already are."
+          </figcaption>
+        </figure>
+
+        <div class="why-grid" style="margin-top: 28px;">
+          <div class="why-stat">
+            <div class="big">~90%</div>
+            <div class="desc">Unemployment in the region we serve</div>
+          </div>
+          <div class="why-stat">
+            <div class="big">50%+</div>
+            <div class="desc">Adult illiteracy rate in Haiti</div>
+          </div>
+          <div class="why-stat">
+            <div class="big">80%+</div>
+            <div class="desc">Of the population lives in poverty</div>
+          </div>
+          <div class="why-stat">
+            <div class="big">100k</div>
+            <div class="desc">People in Greater Hinche, our home</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== DONATE =========== -->
+    <section id="donate" class="donate">
+      <div class="wrap">
+        <div class="donate-grid">
+          <div>
+            <div class="kicker" style="color: var(--cream); opacity:.85;">Give</div>
+            <h2>Your gift goes directly to Haiti.</h2>
+            <p class="lede" style="color: rgba(250,246,238,.92);">
+              Every U.S. role at HEF is volunteer. There are no salaries, no overhead departments,
+              no paid fundraisers. More than 95¢ of every dollar arrives in Hinche — as a meal,
+              a textbook, a bag of cement, or a Bible.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="https://www.paypal.com/donate" rel="noopener">Donate via PayPal →</a>
+              <a class="btn btn-ghost" href="#contact">Mail a check</a>
+            </div>
+          </div>
+
+          <div class="donate-card">
+            <h3>What your gift does</h3>
+            <div class="row"><span>$25</span><span>Feeds a child for a month of school</span></div>
+            <div class="row"><span>$100</span><span>Supports a Haitian pastor's ministry</span></div>
+            <div class="row"><span>$500</span><span>Helps fund a village well or cistern</span></div>
+            <div class="row"><span>$1,000</span><span>Sponsors an entire classroom for a term</span></div>
+            <p style="margin-top:18px; font-size:.85rem; color: rgba(250,246,238,.7);">
+              HEF is a registered 501(c)(3) non-profit. All donations are tax-deductible to the extent
+              allowed by law.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== CONTACT =========== -->
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Get in touch.</h2>
+          <p class="lede" style="color: rgba(250,246,238,.85);">
+            Questions about a trip, a partnership, or sending a gift by mail? We'd love to hear from you.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <div class="label">Email</div>
+            <a class="big-link" href="mailto:info@haitiendowment.com">info@haitiendowment.com</a>
+          </div>
+          <div>
+            <div class="label">Phone</div>
+            <a class="big-link" href="tel:+19515019822">(951) 501-9822</a>
+          </div>
+          <div>
+            <div class="label">Mailing Address</div>
+            <p style="font-family: var(--font-serif); font-size:1.15rem; color: var(--cream); margin-top:4px;">
+              Haiti Endowment Fund<br/>
+              P.O. Box 743<br/>
+              Temecula, CA 92593
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========== FOOTER =========== -->
+  <footer>
+    <div class="wrap foot">
+      <div>
+        © <span id="yr"></span> Haiti Endowment Fund · 501(c)(3) non-profit ·
+        <a href="#top" style="color: rgba(250,246,238,.6);">Back to top</a>
+      </div>
+      <div class="social" aria-label="Social links">
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.5c0-2.4 1.4-3.7 3.6-3.7 1 0 2.1.2 2.1.2v2.3h-1.2c-1.2 0-1.5.7-1.5 1.5V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12Z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.2-1.5-.9-2.2c-.8-.8-1.7-.9-2.1-.9C16.7 3.5 12 3.5 12 3.5s-4.7 0-8 .4c-.4.1-1.3.1-2.1.9C1.2 5.5 1 7 1 7S.8 8.7.8 10.5v1.7C.8 14 1 15.7 1 15.7s.2 1.5.9 2.2c.8.8 1.9.8 2.4.9 1.7.2 7.7.4 7.7.4s4.7 0 8-.4c.4-.1 1.3-.1 2.1-.9.7-.7.9-2.2.9-2.2s.2-1.7.2-3.5v-1.7c0-1.8-.2-3.5-.2-3.5ZM9.8 14.2V8.3l5.6 3-5.6 2.9Z"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1A4.1 4.1 0 0 0 11.7 9c0 .3 0 .6.1.9C8.3 9.7 5.2 8 3 5.5c-.4.6-.6 1.3-.6 2.1 0 1.4.7 2.7 1.8 3.4-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4-.3.1-.7.1-1.1.1-.3 0-.5 0-.8-.1.5 1.6 2 2.8 3.8 2.8A8.2 8.2 0 0 1 2 18.9 11.6 11.6 0 0 0 8.3 21c7.6 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year in footer
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Subtle reveal animations
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('section, .card, .stat, .why-stat').forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  </script>
+</body>
+</html>
