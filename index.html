@@ -447,6 +447,32 @@
       text-shadow: 0 1px 2px rgba(0,0,0,.5);
     }
 
+    /* ---------- Video ---------- */
+    .video {
+      background: var(--cream-2);
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 56px;
+      align-items: center;
+    }
+    @media (max-width: 880px) { .video-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: #000;
+    }
+    .video-frame iframe {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .video .kicker { color: var(--terra); }
+
     /* ---------- Stories gallery ---------- */
     .stories { background: #fff; }
     .gallery-grid {
@@ -691,6 +717,7 @@
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#mission">Our Mission</a>
+        <a href="#watch">Watch</a>
         <a href="#founders">Founders</a>
         <a href="#programs">Programs</a>
         <a href="#stories">Stories</a>
@@ -767,6 +794,36 @@
               and widows in their trouble, and to keep oneself unspotted from the world."
               <cite>— James 1:27</cite>
             </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========== VIDEO =========== -->
+    <section id="watch" class="video">
+      <div class="wrap">
+        <div class="video-grid">
+          <div>
+            <div class="kicker">Watch Our Story</div>
+            <h2>Hinche, in their own voices.</h2>
+            <p class="lede">
+              Words can only do so much. Press play to see what 35 years of partnership
+              with the Haitian church looks like — the worship, the children, the work.
+            </p>
+            <p>
+              <a class="btn btn-dark" href="https://www.youtube.com/channel/UCog7dpzLgK9-mgAd9vt-v8A" target="_blank" rel="noopener">More videos on YouTube →</a>
+            </p>
+          </div>
+
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/zoV1EWj4Kuk?rel=0"
+              title="Haiti Endowment Fund — Friday Night Worship"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
           </div>
         </div>
       </div>
